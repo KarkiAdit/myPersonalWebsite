@@ -165,11 +165,30 @@ nav ul li a:hover {
   background-color: #324340;
   border-radius: 20px;
   box-shadow: 4px 10px 30px rgba(80, 221, 196, 0.2);
+  z-index: 3;
 }
 .portfolio-btn:hover {
   background-color: #23cdaf;
   transition: all ease 0.2s;
   font-weight: bold;
+}
+.portfolio-btn .cv-icon1 {
+  height: 80%;
+  width: auto;
+  margin-left: 5px;
+}
+.portfolio-btn .cv-icon2 {
+  display: none;
+}
+
+.portfolio-btn:hover .cv-icon2 {
+  display: inherit;
+  height: 80%;
+  width: auto;
+  margin-left: 5px;
+}
+.portfolio-btn:hover .cv-icon1 {
+  display: none;
 }
 #skills {
   display: flex;
