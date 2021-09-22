@@ -12,10 +12,13 @@
 }
 ::root {
   font-size: 16px;
+  --color-accent: #f88c1a;
+  --color-header: #113257;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  background: #161623;
 }
 
 ul {
@@ -24,11 +27,9 @@ ul {
 a {
   text-decoration: none;
 }
+
 #main {
   width: 100%;
-  margin-bottom: 30px;
-  height: 100vh;
-  /* position: relative; */
 }
 nav {
   display: flex;
@@ -36,15 +37,13 @@ nav {
   align-items: center;
   box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.02);
   position: fixed;
-  /* left: 0; */
-  /* top: 0; */
   width: 100%;
   z-index: 1;
-  background-color: #ffffff;
-  height: 5rem;
+  background-color: #161623;
+  height: 6rem;
 }
 .logo img {
-  height: 15rem;
+  height: 8rem;
 }
 nav ul {
   display: flex;
@@ -58,49 +57,103 @@ nav ul li a {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: #585b5b;
+  color: #36b7b5;
   letter-spacing: 1px;
 }
-.hey {
-  color: #39bfbd;
-  font-weight: 500;
-  font-size: 0.9rem;
-  border-bottom: 2px solid #40c6c4;
+.icon {
+  height: 6rem;
+  align-self: center;
+}
+.icon img {
+  height: 100%;
 }
 nav ul li a:hover {
-  background-color: #2adabc;
-  color: #ffffff;
+  font-weight: bold;
+  color: whitesmoke;
   box-shadow: 5px 10px 30px rgba(64, 198, 196, 0.3);
   transition: all ease 0.2s;
+  border-radius: 5px;
+}
+.container {
+  position: absolute;
+  top: 6rem;
 }
 .content {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 6rem;
-  /* transform: translate(-50%, -50%); */
-}
-.model img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.model {
-  width: 500px;
-  height: 500px;
+  margin: 0 auto 0 auto;
+  min-height: 90vh;
+  clip-path: ellipse(120vmax 100% at 50% 0%);
+  background-image: url(/images/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 2rem;
 }
 .main-text {
-  width: 500px;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
 }
-.main-text h1 {
-  font-size: 3.5rem;
-  color: #1c3548;
+.main-text h1,
+.main-text p {
+  font-size: 2.25rem;
+  color: #5fabe5;
   margin: 0px 0px 10px 0px;
   line-height: 60px;
 }
 .main-text p {
-  color: #747474;
+  font-size: 1.63rem;
+}
+.main-text p span {
+  font-weight: bold;
+}
+.type-1 {
+  font-weight: normal;
+  color: rgb(160 152 173);
+}
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+.main-text img {
+  width: 100%;
+  height: 50vh;
+  display: inherit;
+  object-fit: contain;
 }
 .portfolio-btn {
   width: 190px;
@@ -109,21 +162,22 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  background-color: #1db096;
+  background-color: #324340;
   border-radius: 20px;
-  box-shadow: 4px 10px 30px rgba(24, 139, 119, 0.2);
+  box-shadow: 4px 10px 30px rgba(80, 221, 196, 0.2);
 }
 .portfolio-btn:hover {
   background-color: #23cdaf;
   transition: all ease 0.2s;
+  font-weight: bold;
 }
 #skills {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 90%;
-  margin: 0px auto 30px auto;
-  padding-top: 5rem;
+  margin: 0px auto 0px auto;
+  padding-top: 6rem;
 }
 .skill-text {
   width: 400px;
@@ -194,8 +248,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
-  margin-bottom: 30px;
+  padding-top: 6rem;
   flex-direction: column;
 }
 .recent-heading span,
@@ -246,8 +299,7 @@ nav ul li a:hover {
   width: 100%;
   border-top: 1px solid rgba(58, 58, 58, 0.03);
   border-bottom: 1px solid rgba(58, 58, 58, 0.03);
-  padding-top: 5rem;
-  margin-bottom: 30px;
+  padding-top: 6rem;
   background-image: url("../images/bg.png");
   background-position: center;
   background-size: 1000px;
@@ -338,7 +390,7 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 6rem;
 }
 #contact h3 {
   font-size: 2.5rem;
@@ -393,20 +445,13 @@ nav .menu-btn,
 .menu-icon {
   display: none;
 }
+
 @media (max-width: 1140px) {
   .content {
     width: 100%;
   }
-  .model {
-    width: 400px;
-    height: 400px;
-  }
-  .main-text,
-  .model {
+  .main-text {
     margin: 10px;
-  }
-  .main-text h1 {
-    font-size: 3rem;
   }
   .skill-img {
     width: 400px;
@@ -425,9 +470,6 @@ nav .menu-btn,
     height: 65px;
     padding: 0px 30px;
   }
-  /* .logo img {
-    height: 35px;
-  } */
   .menu {
     display: none;
     position: absolute;
@@ -459,7 +501,7 @@ nav .menu-btn,
     user-select: none;
   }
   nav .menu-icon .nav-icon {
-    background-color: #333333;
+    background-color: #36b7b5;
     display: block;
     height: 2px;
     position: relative;
@@ -468,7 +510,7 @@ nav .menu-btn,
   }
   nav .menu-icon .nav-icon:before,
   nav .menu-icon .nav-icon:after {
-    background: #333;
+    background: #36b7b5;
     content: "";
     display: block;
     height: 100%;
@@ -527,16 +569,10 @@ nav .menu-btn,
   }
 }
 @media (max-width: 720px) {
-  .model {
-    display: none;
+  .main-text p {
+    font-size: 1.28rem;
   }
-  .main-text {
-    width: 70%;
-    /* position: absolute; */
-    /* left: 50%; */
-    /* top: 50%; */
-    /* transform: translate(-50%, -50%); */
-  }
+
   #contact img {
     height: 200px;
   }
@@ -563,5 +599,16 @@ nav .menu-btn,
   }
   #skills {
     margin: 0px;
+  }
+}
+@media (min-width: 440px) {
+  .logo img {
+    height: 15rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .icon {
+    height: 8rem;
   }
 }
