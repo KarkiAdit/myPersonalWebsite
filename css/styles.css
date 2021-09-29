@@ -187,6 +187,9 @@ nav ul li a:hover {
   margin: 0px auto 0px auto;
   padding-top: 2rem;
   color: white;
+  background-image: url("../images/bg.png");
+  background-position: top;
+  background-size: 400px;
 }
 #about h1 {
   font-size: 2.5rem;
@@ -233,6 +236,7 @@ nav ul li a:hover {
   max-width: 90vw;
   border-radius: 0.5rem;
   border: solid rgb(70, 70, 99) 2.5px;
+  background-color: #0b2234;
 }
 .more-about {
   display: flex;
@@ -287,65 +291,75 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin: 0px auto 0px auto;
   padding-top: 6rem;
+  background-color: #0b2234;
 }
-.skill-text {
-  width: 400px;
-}
-.skill-img {
-  width: 600px;
-  height: 600px;
-}
-.skill-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.skill-heading {
+  width: 80%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 .skill-heading span {
-  color: #36b7b5;
+  color: rgb(160 152 173);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1rem;
 }
 .skill-heading h2 {
-  color: #1c3548;
-  font-size: 3.3rem;
+  color: #5fabe5;
+  font-size: 2.4rem;
   margin: 0px;
   font-weight: 400;
   letter-spacing: 1px;
 }
 .s-box-container {
-  margin-top: 30px;
+  margin-top: 2rem;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .skill-box {
   display: flex;
-  margin: 25px 0px;
+  margin: 3rem 0px;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
 }
 .s-box-icon {
   margin-right: 12px;
 }
 .s-box-icon i {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
-  font-size: 1.1rem;
+  font-size: 2.3rem;
 }
 .s-box-text strong {
-  color: #1c3548;
+  color: #5fabe5;
   margin: 0px;
   font-size: 0.9rem;
   font-weight: 600;
 }
 .s-box-text p {
-  color: #747474;
-  font-size: 0.9rem;
+  color: rgba(217, 204, 239, 1);
+  font-weight: 500;
+}
+.fa-python {
+  color: #088145;
 }
 .fa-html5 {
   color: #e06061;
@@ -363,19 +377,23 @@ nav ul li a:hover {
   padding-top: 6rem;
   flex-direction: column;
 }
+.recent-heading {
+  width: 80%;
+  text-align: center;
+}
 .recent-heading span,
 .client-heading span {
-  color: #36b7b5;
+  color: rgb(160 152 173);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .recent-heading h3,
 .client-heading h3,
 #contact h3 {
-  color: #1c3548;
-  font-size: 3rem;
+  color: #5fabe5;
+  font-size: 2.4rem;
   margin: 0px;
   font-weight: 400;
   letter-spacing: 1px;
@@ -415,6 +433,7 @@ nav ul li a:hover {
   background-image: url("../images/bg.png");
   background-position: center;
   background-size: 1000px;
+  background-color: #0b2234;
 }
 .client-heading {
   display: flex;
@@ -571,13 +590,6 @@ nav .menu-btn,
   .main-text {
     margin: 10px;
   }
-  .skill-img {
-    width: 400px;
-    height: 400px;
-  }
-  .client-box {
-    flex-grow: 0.5;
-  }
 }
 @media (max-width: 900px) {
   .menu-icon {
@@ -659,22 +671,6 @@ nav .menu-btn,
   nav .menu-btn:checked ~ .menu {
     display: block;
   }
-  #skills {
-    width: 100%;
-    justify-content: space-between;
-    padding-left: 40px;
-  }
-  .skill-text {
-    width: 400px;
-  }
-  .skill-img {
-    width: 40%;
-    height: 300px;
-  }
-  .skill-img img {
-    object-fit: cover;
-    object-position: left;
-  }
   .recent-heading h3,
   .client-heading h3,
   #contact h3 {
@@ -704,15 +700,6 @@ nav .menu-btn,
 @media (max-width: 530px) {
   .contact-input {
     width: 90%;
-  }
-  .skill-img {
-    display: none;
-  }
-  .skill-text {
-    width: 85%;
-  }
-  #skills {
-    margin: 0px;
   }
 }
 @media (max-width: 465px) {
