@@ -28,6 +28,98 @@ a {
   text-decoration: none;
 }
 
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #161623;
+  overflow: hidden;
+  z-index: 1000;
+  transition: opacity 0.5s 0.4s;
+}
+
+.preloader.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.outer-space {
+  width: 600px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rocket-container {
+  position: absolute;
+  bottom: 52%;
+  left: 49%;
+  transform: translate(-50%, 50%);
+}
+
+.rocket {
+  height: 320px;
+  animation: move 0.2s linear infinite alternate;
+}
+
+.preloader.preload-finish .rocket-container {
+  animation: finish 0.5s 1 ease forwards;
+}
+
+@keyframes finish {
+  from {
+    bottom: 52%;
+  }
+  to {
+    bottom: 140%;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+
+.title {
+  color: #5fabe5;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#circle {
+  animation: move-circle 0.2s linear infinite alternate;
+}
+
+@keyframes move-circle {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes stars {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateY(1000px);
+  }
+}
+
 #main {
   width: 100vw;
 }
@@ -1129,42 +1221,6 @@ button:focus {
   display: none;
 }
 
-.loading__wrapper {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #161623;
-  z-index: 500;
-}
-.loading__wrapper .loader--text {
-  color: #5fabe5;
-  font-weight: 500;
-  font-size: 3rem;
-  margin-bottom: 1.4rem;
-}
-.loading__wrapper .loader {
-  position: relative;
-  width: 200px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.25);
-}
-.loading__wrapper .loader span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: red;
-  transform: scaleX(1) var(4s);
-  transform-origin: left;
-}
-
 @media only screen and (min-width: 820px) {
   :root {
     --card-width: 250px;
@@ -1180,4 +1236,84 @@ button:focus {
   .cardList__btn.btn--right {
     right: -5%;
   }
+}
+section.recent-other {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.wrapper {
+  width: 100%;
+}
+.carousel {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5px 30px;
+  background-color: #161623;
+}
+.carousel .card-recent-2 {
+  color: rgba(217, 204, 239, 1);
+  text-align: center;
+  margin: 20px 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: black;
+  box-shadow: 2px 3px rgba(217, 204, 239, 1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.carousel .card-recent-2 h1 {
+  color: #5fabe5;
+}
+
+.carousel .card-recent-2 embed {
+  width: 70% !important;
+  margin: 0.5rem auto;
+}
+.carousel .card-recent-2 span {
+  color: #5fabe5;
+  font-weight: bold;
+}
+.carousel .card-recent-2 a {
+  text-decoration: none;
+  font-weight: none;
+  color: rgba(217, 204, 239, 1);
+  padding: 0.3rem;
+  box-shadow: 10px 10px 30px rgb(0 0 0 / 50%);
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  display: block;
+  width: 25%;
+  margin: 0.5rem auto;
+}
+.carousel .card-recent-2 a:hover {
+  transition: all ease 0.2s;
+  font-weight: bold;
+  box-shadow: 20px 20px 30px rgba(80, 221, 196, 0.2);
+  background-color: inherit;
+}
+
+.owl-dots {
+  text-align: center;
+}
+.owl-dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 50%;
+  border: 2px solid #68a5d3 !important;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: #5fabe5 !important;
 }

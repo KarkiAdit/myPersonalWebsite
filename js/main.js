@@ -1,3 +1,15 @@
+const stars = document.querySelectorAll("#star");
+
+stars.forEach((star) => {
+  let duration = Math.random() * (1.2 - 0.6) + 0.6;
+  star.style.animation = `stars ${duration}s infinite linear`;
+});
+
+window.addEventListener("load", () => {
+  const preloader = document.querySelector(".preloader");
+  preloader.classList.add("preload-finish");
+});
+
 const typedTextSpan = document.querySelector(".type-1");
 const cursorSpan = document.querySelector(".cursor");
 
@@ -315,3 +327,22 @@ const waitForImages = () => {
 };
 
 waitForImages();
+
+$(".carousel").owlCarousel({
+  margin: 20,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1,
+      nav: false,
+    },
+    600: {
+      items: 2,
+      nav: false,
+    },
+    1000: {
+      items: 3,
+      nav: false,
+    },
+  },
+});
