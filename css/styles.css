@@ -767,7 +767,7 @@ nav .menu-btn,
     position: absolute;
     top: 65px;
     left: 0px;
-    background-color: #ffffff;
+    background-color: rgb(14, 13, 13);
     border-bottom: 4px solid #1db096;
     width: 100%;
     padding: 0px;
