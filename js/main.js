@@ -346,3 +346,23 @@ $(".carousel").owlCarousel({
     },
   },
 });
+
+const button = document.getElementById("myButton");
+const div = document.getElementById("myLinks");
+const icon = document.getElementsByClassName("main-icon");
+
+document.onclick = function (e) {
+  if (
+    e.target.id !== "myButton" &&
+    e.target.id !== "itag" &&
+    div.classList !== "active"
+  ) {
+    div.classList.remove("active");
+  }
+};
+div.onclick = function () {
+  div.classList.toggle("active");
+};
+button.onclick = function () {
+  div.classList.toggle("active");
+};

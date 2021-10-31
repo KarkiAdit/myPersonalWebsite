@@ -1337,3 +1337,58 @@ section.recent-other {
 .owl-dot:hover {
   background: #5fabe5 !important;
 }
+
+#myLinks {
+  display: flex;
+}
+#myLinks a,
+#myButton {
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0px 22px;
+  display: flex;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #abd6d6;
+  letter-spacing: 1px;
+}
+#myButton {
+  display: none;
+  align-self: center;
+  font-size: 1.15rem;
+}
+#myLinks a:hover {
+  font-weight: bold;
+  color: whitesmoke;
+  box-shadow: 5px 10px 30px rgba(64, 198, 196, 0.3);
+  transition: all ease 0.2s;
+  border-radius: 5px;
+  width: 100%;
+}
+@media only screen and (max-width: 900px) {
+  #myLinks {
+    display: none;
+  }
+  #myButton {
+    display: block;
+  }
+}
+
+#myLinks.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  box-shadow: 10px 10px 30px rgb(0 0 0 / 50%);
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid #5fabe5;
+  backdrop-filter: blur(25px);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
