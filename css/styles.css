@@ -1424,7 +1424,7 @@ section.recent-other {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
   z-index: 3000;
   height: 15%;
   color: rgb(95, 171, 229);
@@ -1453,6 +1453,10 @@ section.recent-other {
   overflow-x: hidden;
   color: rgba(217, 204, 239, 1);
   scroll-behavior: smooth;
+}
+
+.modal-body > p {
+  margin-bottom: 1rem;
 }
 
 #overlay {
