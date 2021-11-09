@@ -248,6 +248,10 @@ nav ul li a:hover {
   object-fit: contain;
 }
 .portfolio-btn {
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
   width: 190px;
   height: 44px;
   display: flex;
@@ -1391,4 +1395,91 @@ section.recent-other {
   width: 100%;
   padding: 0px;
   margin: 0px;
+}
+
+.modal {
+  position: fixed;
+  top: 7rem;
+  left: 5vw;
+  transform: translate(0%, 0%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 100;
+  width: 90vw;
+  height: 75%;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(40px);
+}
+
+.modal.active {
+  transform: translate(0%, 0%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  z-index: 3000;
+  height: 15%;
+  color: rgb(95, 171, 229);
+  background: rgba(21, 2, 2, 0.22);
+}
+
+.modal-header .modal-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(211 200 200 / 75%);
+}
+
+.modal-body {
+  padding: 10px 15px;
+  height: 85%;
+  overflow: scroll;
+  overflow-x: hidden;
+  color: rgba(217, 204, 239, 1);
+  scroll-behavior: smooth;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 26, 91, 0.4);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media only screen and (max-width: 560px) {
+  .modal-header {
+    height: 30%;
+  }
+  .modal-body {
+    height: 70%;
+  }
+  .modal-header .modal-title {
+    font-size: 1.5rem;
+  }
 }
