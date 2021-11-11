@@ -93,7 +93,7 @@ a {
   font-weight: bold;
   font-size: 1.25rem;
   position: absolute;
-  top: 80%;
+  top: 83vh;
   left: 50%;
   transform: translateX(-50%);
 }
