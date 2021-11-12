@@ -47,7 +47,7 @@
   -webkit-backface-visibility: hidden;
   -webkit-touch-callout: none;
 }
-.owl-carousel .owl-item img {
+.owl-carousel .owl-item iframe {
   display: block;
   width: 100%;
 }
