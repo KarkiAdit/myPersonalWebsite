@@ -23,21 +23,14 @@
       href="images/chatbot-icon-version2.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="css/ajax-design.css" />
+    <link rel="stylesheet" href="css/owl-carousel.css" />
+    <link rel="stylesheet" href="css/unpkg.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!--using FontAwesome--------------->
-    <script
-      src="https://kit.fontawesome.com/c8e4d183c2.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body id="body">
     <div class="preloader">
@@ -938,7 +931,10 @@
           </div>
           <div class="card-recent-2">
             <h1>CodePen</h1>
-            <img src="https://github.com/KarkiAdit/myPersonalWebsite/blob/master/codepen-gif.gif" alt="img" />
+            <img
+              src="https://github.com/KarkiAdit/myPersonalWebsite/blob/master/codepen-gif.gif"
+              alt="img"
+            />
             <p>
               This <span>Travel-Brochure</span> is an interactive re-usable
               card-design, which is created purely using HTML and CSS. It is a
@@ -1486,19 +1482,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/learn-more.js"></script>
-    <script src="js/text-animation.js"></script>
 
     <script>
       AOS.init();
-    </script>
-    <script type="text/javascript">
-      $(window).scroll(function () {
-        var scroll = $(window).scrollTop(),
-          dh = $(document).height();
-        wh = $(window).height();
-        scrollPercent = (scroll / (dh - wh)) * 100;
-        $("#progressbar").css("height", scrollPercent + "%");
-      });
     </script>
   </body>
 </html>
