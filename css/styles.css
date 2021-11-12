@@ -33,6 +33,10 @@ a {
   text-decoration: none;
 }
 
+#resume {
+  font-size: 0.83rem;
+}
+
 .preloader {
   position: fixed;
   width: 100%;
