@@ -1,15 +1,3 @@
-const stars = document.querySelectorAll("#star");
-
-stars.forEach((star) => {
-  let duration = 3;
-  star.style.animation = `stars ${duration}s infinite linear`;
-});
-
-window.addEventListener("load", () => {
-  const preloader = document.querySelector(".preloader");
-  preloader.classList.add("preload-finish");
-});
-
 const typedTextSpan = document.querySelector(".type-1");
 const cursorSpan = document.querySelector(".cursor");
 
