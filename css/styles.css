@@ -47,7 +47,7 @@ a {
   overflow: hidden;
   z-index: 1000;
   transition: opacity 0.5s 0.4s;
-  animation: preloader-finish 6s forwards;
+  animation: preloader-finish 5s forwards;
 }
 
 @keyframes preloader-finish {
@@ -55,13 +55,15 @@ a {
     opacity: 1;
   }
   80% {
-    opacity: 0.95;
+    opacity: 1;
   }
   95% {
-    opacity: 0.8;
+    opacity: 1;
   }
-  to {
+  100% {
     opacity: 0;
+    z-index: -20;
+    background-color: #161623;
   }
 }
 
