@@ -140,7 +140,7 @@ document
     } else {
       const reply_email = new Array(
         "Hey!",
-        "Sorry, you can't make the submission. Your are trying to submit an incomplete form.",
+        "Sorry, you can't make the submission. You are trying to submit an incomplete form.",
         "Please fill all the fields to make a valid submission.",
         "Thank You!"
       );
