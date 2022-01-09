@@ -1455,7 +1455,7 @@ section.recent-other {
   box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
   background: rgba(255, 255, 255, 0.2);
   border: 1.5px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(70px);
 }
 
 .modal.active {
@@ -1499,6 +1499,7 @@ section.recent-other {
 
 .modal-body > p {
   margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 #overlay {
