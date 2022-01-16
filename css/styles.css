@@ -1553,12 +1553,6 @@ body::-webkit-scrollbar {
   scrollbar-width: 5px !important;
 }
 
-.animated-1 {
-  -webkit-box-reflect: below 1px linear-gradient (transparent, #0004);
-  outline: none;
-  animation: animate 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-}
-
 @keyframes animate {
   18.1%,
   20.1%,
