@@ -7,9 +7,9 @@ const textArray = [
   "an Environment Activist",
   "a Marathon Runner",
 ];
-const typingDelay = 65;
-const erasingDelay = 50;
-const newTextDelay = 1500; // Delay between current and next text
+const typingDelay = 50;
+const erasingDelay = 40;
+const newTextDelay = 1000; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
 
