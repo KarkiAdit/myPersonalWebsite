@@ -51,19 +51,8 @@ a {
 }
 
 @keyframes preloader-finish {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -20;
-    background-color: #161623;
+  to {
+    visibility: hidden;
   }
 }
 
