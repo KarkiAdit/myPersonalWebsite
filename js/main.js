@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-console.clear();
+// console.clear();
 
 const { gsap, imagesLoaded } = window;
 
