@@ -394,6 +394,10 @@ nav ul li a:hover {
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
 }
+.about-card:hover {
+  box-shadow: 5px 10px 30px rgba(241, 238, 238, 0.3);
+  transition: all ease 0.2s;
+}
 
 .template-2 {
   position: relative;
@@ -563,9 +567,8 @@ nav ul li a:hover {
   flex-direction: column;
   padding: 1rem;
   margin: 20px;
-  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
   border-radius: 15px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px 5px rgb(234 233 233 / 30%);
   background: rgba(255, 255, 255, 0.2);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -635,8 +638,10 @@ nav ul li a:hover {
 .card-recent-2:hover {
   transform: translateY(-10px);
   box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.35);
   transition: all ease 0.2s;
+}
+.client-box:hover {
+  background-color: rgba(255, 255, 255, 0.35);
 }
 .client-box .button-part .button:hover {
   transition: all ease 0.2s;
@@ -668,17 +673,13 @@ svg path:hover {
   margin-bottom: 1rem;
 }
 .content-card {
-  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
-  border-radius: 15px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
+  border-radius: 0.5rem;
+  border: 3px solid rgb(70, 70, 99);
+  box-shadow: rgb(0 0 0 / 50%) 20px 20px 50px;
+  backdrop-filter: blur(30px);
   transition: 0.5s ease;
   width: 100%;
   padding: 2rem 2rem;
-  border-radius: 20px;
 }
 .content-card .btn-2 {
   margin-right: auto;
@@ -1315,12 +1316,10 @@ section.recent-other {
   padding: 0.5rem;
   font-size: 1rem;
   overflow: hidden;
-  border-radius: 15px;
-  background-color: black;
-  box-shadow: 2px 3px rgba(217, 204, 239, 1);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
+  border-radius: 0.5rem;
+  border: 3px solid rgb(70, 70, 99);
+  box-shadow: rgb(0 0 0 / 50%) 20px 20px 50px;
+  backdrop-filter: blur(3px);
 }
 
 .carousel .card-recent-2 h1 {
