@@ -156,7 +156,7 @@ nav {
   max-width: 100vw;
   z-index: 200;
   height: 6rem;
-  transition: 0.7s;
+  transition: 0.5s;
   top: 0;
 }
 nav.sticky {
