@@ -488,16 +488,8 @@
 
       <h3 class="title">Namaste! Flying to the "AK Planet"</h3>
     </div>
-    <script>
-      const stars = document.querySelectorAll("#star");
-
-      stars.forEach((star) => {
-        let duration = 3;
-        star.style.animation = `stars ${duration}s infinite linear`;
-      });
-    </script>
     <section id="main">
-      <nav id="navBar">
+      <nav>
         <!--logo--------------->
         <a href="#" class="logo" alt="Aditya">
           <img src="images/logo-Aditya.png" />
@@ -559,9 +551,9 @@
           </div>
           <h2>Passion</h2>
           <p>
-            I love the intersection between Mathematics and Computer Science. As
-            a Data Scientist, I want to study the earthquake-prone areas, find
-            patterns, and make earthquake prediction technology a possibility.
+            As a Data Scientist, I want to deeply study about the
+            earthquake-prone areas, find patterns, and make earthquake
+            prediction technology a possibility.
           </p>
           <button
             class="portfolio-btn btn-2"
@@ -1548,6 +1540,17 @@
     <script src="js/learn-more.js"></script>
 
     <script>
+      const stars = document.querySelectorAll("#star");
+
+      stars.forEach((star) => {
+        let duration = 3;
+        star.style.animation = `stars ${duration}s infinite linear`;
+      });
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY > 350);
+      });
+
       AOS.init();
     </script>
   </body>
