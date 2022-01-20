@@ -617,23 +617,6 @@
           </button>
         </div>
       </div>
-      <div class="part-1">
-        <h1>Learning to Code for a cause.</h1>
-        <p>
-          I believe that coding holds the power to simplify the world by solving
-          real-world human problems.
-        </p>
-        <div class="template-1"></div>
-      </div>
-      <!-- the video -->
-      <div class="about-video">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/videoseries?list=PL5IM9t0NdPr6AkFoKLNvGQ_5v5xAk5sZe&autoplay=1&mute=1&controls=0&loop=1"
-          class="video-1"
-        ></iframe>
-      </div>
     </section>
     <!--skills------------->
     <section id="skills">
@@ -960,9 +943,25 @@
     </section>
     <!--client----------------------------------->
     <section id="client">
+      <div class="part-1">
+        <h1>Learning to Code for a cause.</h1>
+        <p>
+          I believe that coding holds the power to simplify the world by solving
+          real-world human problems.
+        </p>
+        <div class="template-1"></div>
+      </div>
+      <!-- the video -->
+      <div class="about-video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?list=PL5IM9t0NdPr6AkFoKLNvGQ_5v5xAk5sZe&autoplay=1&mute=1&controls=0&loop=1"
+          class="video-1"
+        ></iframe>
+      </div>
       <!--heading------->
       <div class="client-heading">
-        <span>Projects</span>
         <h3>My Project Designs</h3>
       </div>
       <!--client-box-container--------------->
@@ -1495,7 +1494,7 @@
       const stars = document.querySelectorAll("#star");
 
       stars.forEach((star) => {
-        let duration = 3;
+        let duration = 5;
         star.style.animation = `stars ${duration}s infinite linear`;
       });
       window.addEventListener("scroll", function () {

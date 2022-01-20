@@ -12,8 +12,9 @@
 }
 :root {
   font-size: 16px;
-  --bg-color-second: #0b2234;
+  --bg-color: #0c0f113b;
   --bg-color-third: #0c0f113b;
+  --bg-color-second: #0b2234;
   --card-width: 50%;
   --card-height: 300px;
   --card-transition-duration: 500ms;
@@ -51,7 +52,7 @@ a {
   overflow: hidden;
   z-index: 1000;
   transition: opacity 0.5s 0.4s;
-  animation: preloader-finish 5s forwards;
+  animation: preloader-finish 8.5s forwards;
 }
 
 @keyframes preloader-finish {
@@ -359,6 +360,8 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   padding: 2rem 0rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 .video-1 {
   width: 90%;
@@ -540,8 +543,8 @@ nav ul li a:hover {
   padding-top: 6rem;
   background-image: url("../images/bg.png");
   background-position: center;
-  background-size: 1000px;
-  background-color: var(--bg-color-third);
+  background-size: 800px;
+  background-color: var(--bg-color-second);
 }
 .client-heading {
   display: flex;
@@ -653,12 +656,13 @@ svg path:hover {
   fill: #000;
 }
 #contact {
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 0 2rem;
-  padding-top: 6rem;
+  padding: 6rem 2rem 0 2rem;
+  background-color: var(--bg-color-third);
 }
 .form-section,
 .contact-section {
@@ -771,7 +775,8 @@ svg path:hover {
 }
 @media screen and (min-width: 900px) {
   #contact {
-    margin: 0 5rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
     flex-direction: row;
   }
   #email-link {
@@ -910,7 +915,7 @@ nav .menu-btn,
   color: rgb(95, 171, 229);
   width: 100%;
   font-size: 0.65rem;
-  background-color: var(--bg-color-third);
+  background-color: var(--bg-color-second);
 }
 
 .main-footer {
