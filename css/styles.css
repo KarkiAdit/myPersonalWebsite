@@ -10,15 +10,19 @@
   margin: 0;
   scroll-behavior: smooth;
 }
-::root {
+:root {
   font-size: 16px;
-  --color-accent: #f88c1a;
-  --color-header: #113257;
+  --bg-color-second: #0b2234;
+  --bg-color-third: #0c0f113b;
+  --card-width: 50%;
+  --card-height: 300px;
+  --card-transition-duration: 500ms;
+  --card-transition-easing: ease;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #161623;
+  background-color: var(--bg-color-second);
   overflow-x: hidden;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -156,7 +160,8 @@ nav {
   top: 0;
 }
 nav.sticky {
-  background-color: rgb(22, 22, 35);
+  /* background-color: var(--bg-color-second); */
+  backdrop-filter: blur(50px);
 }
 .logo img {
   height: 8rem;
@@ -345,13 +350,12 @@ nav ul li a:hover {
 .about-video {
   position: relative;
   top: -5rem;
-  width: 65vw;
+  width: 75vw;
   height: 40vw;
   border-radius: 0.5rem;
   border: solid rgb(70, 70, 99) 5px;
-  border-bottom: 0;
-  border-left: 0;
-  background-color: black;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
   padding: 2rem 0rem;
@@ -385,6 +389,10 @@ nav ul li a:hover {
   flex-direction: column;
   margin: 1rem;
   text-align: center;
+  border-radius: 0.5rem;
+  border: solid rgb(70, 70, 99) 3px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
 }
 
 .template-2 {
@@ -392,7 +400,6 @@ nav ul li a:hover {
   width: 100%;
   border-radius: 5%;
   padding: 1rem;
-  background-color: #00001054;
 }
 .template-2 video {
   width: 100%;
@@ -421,7 +428,7 @@ nav ul li a:hover {
   width: 100%;
   margin: 0px auto 0px auto;
   padding-top: 6rem;
-  background-color: #0b2234;
+  background-color: var(--bg-color-third);
 }
 .skill-heading {
   width: 80%;
@@ -530,7 +537,7 @@ nav ul li a:hover {
   background-image: url("../images/bg.png");
   background-position: center;
   background-size: 1000px;
-  background-color: #0b2234;
+  background-color: var(--bg-color-third);
 }
 .client-heading {
   display: flex;
@@ -902,7 +909,7 @@ nav .menu-btn,
   color: rgb(95, 171, 229);
   width: 100%;
   font-size: 0.65rem;
-  background-color: rgb(11, 34, 52);
+  background-color: var(--bg-color-third);
 }
 
 .main-footer {
@@ -1017,12 +1024,6 @@ nav .menu-btn,
   .footer-body .footer-content p:first-child {
     display: inherit;
   }
-}
-:root {
-  --card-width: 50%;
-  --card-height: 300px;
-  --card-transition-duration: 500ms;
-  --card-transition-easing: ease;
 }
 
 .recent-project {
@@ -1305,7 +1306,7 @@ section.recent-other {
   max-width: 1200px;
   margin: auto;
   padding: 5px 30px;
-  background-color: #161623;
+  background-color: var(--bg-color-second);
 }
 .carousel .card-recent-2 {
   color: rgba(217, 204, 239, 1);
@@ -1419,10 +1420,8 @@ section.recent-other {
   position: absolute;
   top: 65px;
   left: 0px;
-  box-shadow: 10px 10px 30px rgb(0 0 0 / 50%);
-  background: rgba(255, 255, 255, 0.2);
+  background-color: rgb(59 42 77 / 93%);
   border-bottom: 2px solid #5fabe5;
-  backdrop-filter: blur(25px);
   color: rgb(255, 255, 255);
   width: 100%;
   padding: 0px;
