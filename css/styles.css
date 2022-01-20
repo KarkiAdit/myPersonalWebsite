@@ -52,7 +52,7 @@ a {
   overflow: hidden;
   z-index: 1000;
   transition: opacity 0.5s 0.4s;
-  animation: preloader-finish 8.5s forwards;
+  animation: preloader-finish 10s forwards;
 }
 
 @keyframes preloader-finish {
