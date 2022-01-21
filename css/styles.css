@@ -50,7 +50,7 @@ a {
   left: 0;
   background-color: #161623;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 10000000000;
   transition: opacity 0.5s 0.4s;
   animation: preloader-finish 10s forwards;
 }
@@ -155,14 +155,13 @@ nav {
   position: fixed;
   width: 100%;
   max-width: 100vw;
-  z-index: 200;
+  z-index: 200000000;
   height: 6rem;
   transition: 0.5s;
   top: 0;
 }
 nav.sticky {
-  /* background-color: var(--bg-color-second); */
-  backdrop-filter: blur(50px);
+  background-color: var(--bg-color-second);
 }
 .logo img {
   height: 8rem;
@@ -1010,6 +1009,172 @@ nav .menu-btn,
 .footer-end ul li a:hover {
   color: rgb(95, 171, 229);
 }
+
+/* CHATBOX
+=============== */
+.chatbox {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 123456789;
+}
+
+/* ChatBox Main*/
+.chatbox__support {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 450px;
+  z-index: -123456789;
+  opacity: 0;
+  padding: 0.2rem;
+  transition: all 0.5s ease-in-out;
+  border-radius: 15px;
+  border: solid rgb(126 126 233) 3.5px;
+  box-shadow: 10px 10px 10px rgba(209, 207, 207, 0.5);
+  background-color: rgb(53 51 59);
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+  transform: translateY(-5px);
+  z-index: 123456789;
+  opacity: 1;
+}
+
+/* HEADER */
+.chatbox__header {
+  top: 0;
+  background: var(--bg-color-second);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.chatbox__image--header {
+  margin-right: 10px;
+  width: 90px;
+  height: 90px;
+}
+.chatbox__image--header img {
+  height: 100%;
+}
+
+.chatbox__heading--header {
+  font-size: 1.2rem;
+  color: rgb(95, 171, 229);
+  font-weight: bold;
+}
+
+.chatbox__description--header {
+  font-size: 0.85rem;
+  color: white;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+  margin-top: auto;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column-reverse;
+  padding: 0 10px;
+  font-size: 0.9rem;
+  color: #5fabe5;
+}
+
+.messages__item {
+  width: fit-content;
+  border: solid rgb(70, 70, 99) 3px;
+  box-shadow: 10px 10px 30px rgb(0 0 0 / 50%);
+  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+  padding: 8px 12px;
+  max-width: 70%;
+}
+
+.messages__item--operator {
+  margin-left: auto;
+}
+
+.messages__item--visitor {
+  margin-right: auto;
+}
+
+.messages__item--visitor,
+.messages__item--typing {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.messages__item--operator {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: rgba(217, 204, 239, 1);
+}
+
+/* FOOTER */
+.chatbox__footer {
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  background: var(--bg-color-second);
+  margin-top: 20px;
+}
+
+.chatbox__footer input {
+  width: 75%;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 30px;
+  text-align: left;
+  color: rgba(217, 204, 239, 1);
+  background-color: rgba(228, 9, 9, 0.16);
+  font: inherit;
+  font-size: 0.9rem;
+  border: solid rgb(70, 70, 99) 2px;
+}
+
+.send__button {
+  border: 0;
+  font: inherit;
+  font-size: 0.8rem;
+  color: whitesmoke;
+  width: 60px;
+  height: 30px;
+  padding: 3px;
+  background-color: #2a84ca85;
+  border: solid rgb(135 135 143) 2px;
+  border-radius: 15px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.send__button:hover {
+  box-shadow: 3px 3px 3px rgba(209, 207, 207, 0.5);
+  background-color: inherit;
+}
+@media (max-width: 400px) {
+  .chatbox__support {
+    width: 300px;
+  }
+  .chatbox__heading--header {
+    font-size: 1rem;
+  }
+  .chatbox__description--header {
+    font-size: 0.7rem;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .footer-intro,
   .footer-end ul {
@@ -1424,7 +1589,7 @@ section.recent-other {
   position: absolute;
   top: 65px;
   left: 0px;
-  background-color: rgb(59 42 77 / 93%);
+  background-color: #0b2234cf;
   border-bottom: 2px solid #5fabe5;
   color: rgb(255, 255, 255);
   width: 100%;
