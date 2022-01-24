@@ -187,6 +187,19 @@ nav ul li a {
 }
 .icon img {
   height: 100%;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
 }
 nav ul li a:hover {
   font-weight: bold;
