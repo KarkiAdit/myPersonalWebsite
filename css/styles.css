@@ -1027,7 +1027,6 @@ nav .menu-btn,
   height: 450px;
   z-index: -123456789;
   opacity: 0;
-  padding: 0.2rem;
   transition: all 0.5s ease-in-out;
   border-radius: 15px;
   border: solid rgb(126 126 233) 3.5px;
@@ -1045,6 +1044,9 @@ nav .menu-btn,
 /* HEADER */
 .chatbox__header {
   top: 0;
+  z-index: 20;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
   background: var(--bg-color-second);
   display: flex;
   flex-direction: row;
@@ -1077,6 +1079,8 @@ nav .menu-btn,
 /* MESSAGES */
 .chatbox__messages {
   margin-top: auto;
+  max-height: 235px;
+  height: 235px;
   display: flex;
   overflow-y: scroll;
   flex-direction: column-reverse;
@@ -1121,6 +1125,8 @@ nav .menu-btn,
 /* FOOTER */
 .chatbox__footer {
   bottom: 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1605,7 +1611,7 @@ section.recent-other {
   transition: 200ms ease-in-out;
   border: 1px solid black;
   border-radius: 10px;
-  z-index: 300;
+  z-index: 123456791234567;
   width: 95vw;
   height: 97%;
   border-radius: 15px;
@@ -1708,6 +1714,13 @@ body::-webkit-scrollbar {
 }
 .modal-body::-webkit-scrollbar {
   scrollbar-width: 5px !important;
+}
+.chatbox__messages::-webkit-scrollbar {
+  width: 8px;
+  border-top-right-radius: 15px;
+}
+.chatbox__messages::-webkit-scrollbar-thumb {
+  background-color: rgb(94 75 75) !important;
 }
 
 @keyframes animate {

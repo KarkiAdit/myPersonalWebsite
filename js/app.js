@@ -46,6 +46,10 @@ class Chatbox {
     let msg1 = { name: "User", message: text1 };
     this.messages.push(msg1);
 
+    this.updateChatText(chatbox);
+
+    textField.value = "";
+
     fetch("https://chatak.herokuapp.com/predict", {
       method: "POST",
       body: JSON.stringify({ message: text1 }),
@@ -64,7 +68,6 @@ class Chatbox {
       .catch((error) => {
         console.error("Error:", error);
         this.updateChatText(chatbox);
-        textField.value = "";
       });
   }
 
