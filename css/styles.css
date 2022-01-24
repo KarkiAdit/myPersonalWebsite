@@ -428,7 +428,7 @@ nav ul li a:hover {
   color: #5fabe5;
 }
 .about-card p {
-  margin-bottom: 2rem;
+  margin: 0 10px 2rem 10px;
   color: rgba(217, 204, 239, 1);
   font-weight: 500;
 }
