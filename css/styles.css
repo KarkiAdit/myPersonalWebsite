@@ -1502,7 +1502,6 @@ section.recent-other {
   overflow: hidden;
   border-radius: 0.5rem;
   border: 3px solid rgb(70, 70, 99);
-  box-shadow: rgb(0 0 0 / 50%) 20px 20px 50px;
   backdrop-filter: blur(3px);
 }
 
