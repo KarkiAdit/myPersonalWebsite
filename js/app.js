@@ -8,6 +8,7 @@ class Chatbox {
 
     this.state = false;
     this.messages = [];
+    this.requestDataFromChatAK(this.args.chatBox, "Hello");
   }
 
   display() {
@@ -49,7 +50,10 @@ class Chatbox {
     this.updateChatText(chatbox);
 
     textField.value = "";
+    this.requestDataFromChatAK(chatbox, text1);
+  }
 
+  requestDataFromChatAK(chatbox, text1) {
     fetch("https://chatak.herokuapp.com/predict", {
       method: "POST",
       body: JSON.stringify({ message: text1 }),
@@ -60,7 +64,7 @@ class Chatbox {
     })
       .then((r) => r.json())
       .then((r) => {
-        let msg2 = { name: "Sam", message: r.answer };
+        let msg2 = { name: "ChatAK", message: r.answer };
         this.messages.push(msg2);
         this.updateChatText(chatbox);
         textField.value = "";
@@ -70,14 +74,13 @@ class Chatbox {
         this.updateChatText(chatbox);
       });
   }
-
   updateChatText(chatbox) {
     var html = "";
     this.messages
       .slice()
       .reverse()
       .forEach(function (item, index) {
-        if (item.name === "Sam") {
+        if (item.name === "ChatAK") {
           html +=
             '<div class="messages__item messages__item--visitor">' +
             item.message +

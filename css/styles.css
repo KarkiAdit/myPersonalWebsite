@@ -50,7 +50,7 @@ a {
   left: 0;
   background-color: #161623;
   overflow: hidden;
-  z-index: 10000000000;
+  z-index: 1234567912345689;
   transition: opacity 0.5s 0.4s;
   animation: preloader-finish 10s forwards;
 }
