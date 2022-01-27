@@ -343,8 +343,8 @@ nav ul li a:hover {
   background: rgba(22, 22, 35, 0.55);
 }
 
-.part-1 h1,
-.part-1 p {
+#about .part-1 h1,
+#about .part-1 p {
   margin: 2rem 5%;
   z-index: 1;
   color: white;
@@ -353,39 +353,37 @@ nav ul li a:hover {
   font-weight: bold;
   font-size: 2.5rem;
 }
-.part-1 h1 {
+#about .part-1 h1 {
   margin-top: 4rem;
 }
-.part-1 p {
+#about .part-1 p {
   color: #5fabe5;
   font-size: 1.75rem;
 }
 .about-video {
   position: relative;
   top: -5rem;
-  width: 75vw;
-  height: 40vw;
+  width: 65vw;
+  height: 36vw;
   border-radius: 0.5rem;
   border: solid rgb(70, 70, 99) 5px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
-  padding: 2rem 0rem;
+  padding: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
 .video-1 {
-  width: 90%;
-  height: 95%;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  height: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   .about-video {
-    width: 90vw;
-    height: 67vw;
+    width: 96vw;
+    height: 64vw;
   }
 }
 
@@ -555,8 +553,8 @@ nav ul li a:hover {
   padding-top: 6rem;
   background-image: url("../images/bg.png");
   background-position: center;
-  background-size: 800px;
-  background-color: var(--bg-color-second);
+  background-size: 1000px;
+  background-color: var(--bg-color-third);
 }
 .client-heading {
   display: flex;
@@ -674,7 +672,7 @@ svg path:hover {
   flex-direction: column;
   justify-content: center;
   padding: 6rem 2rem 0 2rem;
-  background-color: var(--bg-color-third);
+  background-color: var(--bg-color-second);
 }
 .form-section,
 .contact-section {
@@ -927,7 +925,7 @@ nav .menu-btn,
   color: rgb(95, 171, 229);
   width: 100%;
   font-size: 0.65rem;
-  background-color: var(--bg-color-second);
+  background-color: var(--bg-color-third);
 }
 
 .main-footer {
