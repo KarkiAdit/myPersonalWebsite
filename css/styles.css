@@ -48,11 +48,14 @@ a {
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: #161623;
+  background-color: black;
   overflow: hidden;
   z-index: 1234567912345689;
   transition: opacity 0.5s 0.4s;
-  animation: preloader-finish 10s forwards;
+}
+
+.preloader.active {
+  animation: preloader-finish 19s forwards;
 }
 
 @keyframes preloader-finish {
@@ -83,11 +86,14 @@ a {
 
 .rocket {
   height: 320px;
+}
+
+.rocket.active {
   animation: move 0.2s linear infinite alternate;
 }
 
-.preloader.preload-finish .rocket-container {
-  animation: finish 0.5s 1 ease forwards;
+.rocket-container.active {
+  animation: finish 0.75s 1 ease forwards;
 }
 
 @keyframes finish {
@@ -108,6 +114,17 @@ a {
   }
 }
 
+.preloader button {
+  position: absolute;
+  top: 87vh;
+  left: 50%;
+  transform: translateX(-57%);
+}
+
+.preloader button.active {
+  opacity: 0;
+}
+
 .title {
   color: #5fabe5;
   letter-spacing: 1px;
@@ -117,6 +134,23 @@ a {
   top: 83vh;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0;
+}
+.title.active {
+  opacity: 1;
+}
+
+.loading-image {
+  position: fixed;
+  bottom: 10%;
+  right: 1%;
+  width: 288px;
+  height: 162px;
+  opacity: 0;
+}
+
+.loading-image.active {
+  opacity: 1;
 }
 
 #circle {
@@ -185,9 +219,22 @@ nav ul li a {
   height: 6rem;
   align-self: center;
 }
-.icon img {
+.icon-v1 {
+  height: 8rem;
+  width: 8rem;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+.icon img,
+.icon-v1 img {
   height: 100%;
+  cursor: pointer;
   animation: float 2s ease-in-out infinite;
+}
+
+.icon-v1.active {
+  opacity: 1;
 }
 
 @keyframes float {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta property="og:image" content="images/chatbot-icon-version2.png" />
+    <meta property="og:image" content="images/launch-icon.png" />
     <meta
       name="description"
       content="Namaste! I am Aditya Karki, a highschool graduate and web developer from Nepal. Welcome to my personal website, a journey to know me personally. Learn about my core values and works here. "
@@ -20,7 +20,7 @@
     <title>Aditya Karki</title>
     <link
       rel="shortcut icon"
-      href="images/chatbot-icon-version2.png"
+      href="images/launch-icon.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="css/ajax-design.css" />
@@ -486,7 +486,19 @@
         </svg>
       </div>
 
-      <h3 class="title">Namaste! Flying to the "AK Planet"</h3>
+      <button class="portfolio-btn" target="_blank" id="start-button">
+        Start the Journey
+      </button>
+
+      <h3 class="title">Namaste! Flying to the AK Planet.</h3>
+
+      <video class="loading-image" id="video-element">
+        <source src="videos/loading-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <a href="#" class="icon-v1">
+        <img src="images/chatbot-icon.png" alt="ChatAK" />
+      </a>
     </div>
     <section id="main">
       <nav>
@@ -505,7 +517,7 @@
           <i id="itag" class="fa fa-bars main-icon"></i>
         </a>
         <!--chat me--------->
-        <a href="#myLinks" class="icon chatbox__button">
+        <a class="icon chatbox__button">
           <img src="images/chatbot-icon.png" alt="ChatAK" />
         </a>
       </nav>
@@ -653,7 +665,7 @@
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/DUbqVBnKoKA?rel=0&amp;autoplay=1&mute=0&controls=1&loop=1&list=PLG8EmCEgd5zhfvhFjQzDgYn1SlcWDyLEm"
+          src="https://www.youtube.com/embed/DUbqVBnKoKA?rel=0&amp;autoplay=0&mute=0&controls=1&loop=1&list=PLG8EmCEgd5zhfvhFjQzDgYn1SlcWDyLEm"
           class="video-1"
         ></iframe>
       </div>
@@ -825,15 +837,9 @@
             </div>
           </div>
           <div class="app__bg">
-            <div class="app__bg__image current--image">
-              <img src="1.jpeg" alt="" />
-            </div>
-            <div class="app__bg__image next--image">
-              <img src="2.jpeg" alt="" />
-            </div>
-            <div class="app__bg__image previous--image">
-              <img src="3.jpeg" alt="" />
-            </div>
+            <div class="app__bg__image current--image"></div>
+            <div class="app__bg__image next--image"></div>
+            <div class="app__bg__image previous--image"></div>
           </div>
         </div>
         <svg class="icons" style="display: none">
@@ -1414,7 +1420,7 @@
           <div class="footer-button">
             <a href="resume_AdityaKarki.pdf" target="_blank">Download CV</a>
           </div>
-          <div class="footer-button">Chat Me</div>
+          <div class="footer-button chatbox__buttonF">Chat Me</div>
         </div>
         <div class="footer-body">
           <!--logo--------------->
@@ -1477,12 +1483,36 @@
     <script src="js/main.js"></script>
 
     <script>
-      const stars = document.querySelectorAll("#star");
+      const startButton = document.getElementById("start-button");
+      startButton.onclick = function () {
+        document.querySelector(".preloader").classList.toggle("active");
+        document.querySelector(".rocket").classList.toggle("active");
+        document.querySelector(".icon-v1").classList.toggle("active");
+        launchingRocket();
+        startButton.classList.toggle("active");
+        const Timer1 = setTimeout(function () {
+          document.getElementById("video-element").play();
+          document.querySelector(".title").classList.toggle("active");
+          document.querySelector(".loading-image").classList.toggle("active");
+          const Timer1 = setTimeout(function () {
+            document.querySelector(".loading-image").classList.remove("active");
+            document.querySelector(".icon-v1").classList.remove("active");
+            document
+              .querySelector(".rocket-container")
+              .classList.toggle("active");
+          }, 17200);
+        }, 1000);
+      };
 
-      stars.forEach((star) => {
-        let duration = 5;
-        star.style.animation = `stars ${duration}s infinite linear`;
-      });
+      function launchingRocket() {
+        const stars = document.querySelectorAll("#star");
+
+        stars.forEach((star) => {
+          let duration = 2;
+          star.style.animation = `stars ${duration}s infinite linear`;
+        });
+      }
+
       window.addEventListener("scroll", function () {
         var header = document.querySelector("nav");
         header.classList.toggle("sticky", window.scrollY > 350);
