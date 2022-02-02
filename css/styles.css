@@ -1140,6 +1140,7 @@ nav .menu-btn,
   padding: 0 10px;
   font-size: 0.9rem;
   color: #5fabe5;
+  word-break: break-word;
 }
 
 .messages__item {
