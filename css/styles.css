@@ -123,6 +123,7 @@ a {
 
 .preloader button.active {
   opacity: 0;
+  z-index: -40000;
 }
 
 .title {
