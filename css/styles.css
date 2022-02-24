@@ -147,7 +147,7 @@ a {
   right: 1%;
   width: 288px;
   height: 162px;
-  opacity: 1;
+  opacity: 0;
 }
 
 .loading-image.active {
