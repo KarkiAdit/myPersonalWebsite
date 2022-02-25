@@ -492,7 +492,7 @@
 
       <h3 class="title">Namaste! Flying to the AK Planet.</h3>
 
-      <video class="loading-image" id="video-element">
+      <video class="loading-image" id="video-element" autoplay>
         <source src="videos/loading.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -1479,10 +1479,10 @@
         document.querySelector(".preloader").classList.toggle("active");
         document.querySelector(".rocket").classList.toggle("active");
         document.querySelector(".icon-v1").classList.toggle("active");
-        document.getElementById("video-element").play();
         launchingRocket();
         startButton.classList.toggle("active");
         const Timer1 = setTimeout(function () {
+          document.getElementById("video-element").play();
           document.querySelector(".title").classList.toggle("active");
           document.querySelector(".loading-image").classList.toggle("active");
           const Timer1 = setTimeout(function () {
