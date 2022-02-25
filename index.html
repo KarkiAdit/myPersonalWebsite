@@ -1479,10 +1479,10 @@
         document.querySelector(".preloader").classList.toggle("active");
         document.querySelector(".rocket").classList.toggle("active");
         document.querySelector(".icon-v1").classList.toggle("active");
+        document.getElementById("video-element").play();
         launchingRocket();
         startButton.classList.toggle("active");
         const Timer1 = setTimeout(function () {
-          document.getElementById("video-element").play();
           document.querySelector(".title").classList.toggle("active");
           document.querySelector(".loading-image").classList.toggle("active");
           const Timer1 = setTimeout(function () {
