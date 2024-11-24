@@ -1,9 +1,21 @@
-# myPersonalWebsite
+# Portfolio Website
 
-#### This repository contains code for my personal website. I have explored concepts like Glassmorphishm and advanced CSS to make the website look very elegant and beautiful. I have worked on building 9 areas: `navigation bar, skills, recent works, projects, contact, introduction blogs, startup video, chatbot coding and deployment, and footer.` All designs are self-created by me and 100% effort has gone to writing the 5000+ lines of code.
+A mobile-responsive portfolio website showcasing my projects and personal journey, built with **VanillaJS** and **Tailwind CSS**. It features 6+ components, including a **navigation bar, skills overview, project gallery, and contact form**, all crafted from scratch. Designed and developed entirely by me, with over 5000 lines of meticulously written code.
 
-#### Visit [aditya.com.np](https://www.adityakarki.com.np/) to see the deployment.
+### ✨ Features:
+---
+**⚙️  Figma Prototype**: Designed and implemented using VanillaJS and Tailwind CSS.<br>
+**🤖 Custom Chatbot**: Answers personal questions, visualizes Q&A patterns, and uses a custom dataset trained with PyTorch. The model was deployed using Heroku.<br>
+**💎 Glassmorphism Design**: Incorporates advanced CSS techniques for a clean, elegant look.
 
-https://user-images.githubusercontent.com/68220732/151697378-ac9c52a8-0c86-469f-9878-359e515418b6.mp4
+### 🤖 The Chatbot
+---
+A [smart chatbot](https://github.com/KarkiAdit/ChatAK/blob/main/README.md) built from scratch, leveraging deep learning and neural networks for personalized responses.
 
+### 🎥 Demo:
+---
+[Watch the video demo](https://user-images.githubusercontent.com/68220732/151697378-ac9c52a8-0c86-469f-9878-359e515418b6.mp4)
 
+### 🚀🎉🎉 Deployment: 
+---
+Visit the live website [here](https://www.adityakarki.com.np).
